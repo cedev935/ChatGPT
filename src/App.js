@@ -3,7 +3,7 @@ import { ChatGPT } from "chatgpt-official";
 
 function App() {
   async function chat() {
-    let bot = new ChatGPT("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");
+    let bot = new ChatGPT(process.env.REACT_APP_API_KEY);
   }
 
   return (
