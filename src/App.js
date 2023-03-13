@@ -4,6 +4,8 @@ import { ChatGPT } from "chatgpt-official";
 function App() {
   async function chat() {
     let bot = new ChatGPT(process.env.REACT_APP_API_KEY);
+    let res = bot.ask("Hello? Nice to meet you");
+    console.log(await res);
   }
 
   return (
