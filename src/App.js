@@ -1,22 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { ChatGPT } from "chatgpt-official";
 
 function App() {
+  async function chat() {
+    let bot = new ChatGPT("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");
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <input placeholder="Input your text" />
+        <div className="answer-box"></div>
       </header>
     </div>
   );
